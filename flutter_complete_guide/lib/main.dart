@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/answer.dart';
 import 'package:flutter_complete_guide/question.dart';
 
 // void main() {
@@ -17,19 +18,31 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _questionIndex = 0;
 
+  final questions = const [
+    {
+      "questionText": "What's your favorite color?",
+      "answers": ["Black", "Red", "Green", "White"],
+    },
+    {
+      "questionText": "What's your favorite animal?",
+      "answers": ["Rabbit", "Snake", "Elephant", "Lion"],
+    },
+    {
+      "questionText": "What's your favorite instructor?",
+      "answers": ["Max", "Max", "Max", "Max"],
+    },
+  ];
+
   void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
+
+    if (_questionIndex < questions.length) {}
   }
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      "What's your favorite color?",
-      "What's your favorite animal?",
-    ];
-
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -37,22 +50,11 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Column(
             children: <Widget>[
-              Question(questions[_questionIndex]),
-              ElevatedButton(
-                child: Text('Answer 1'),
-                onPressed: _answerQuestion,
-              ),
-              ElevatedButton(
-                child: Text('Answer 2'),
-                onPressed: () => print("Answer 2 choosen!"),
-              ),
-              ElevatedButton(
-                child: Text('Answer 3'),
-                onPressed: () {
-                  // do something (multi lines anonymous function)
-                  print('Answer 3 choosen!');
-                },
-              ),
+              Question(questions[_questionIndex]['questionText']),
+              ...(questions[_questionIndex]['answers'] as List<String>)
+                  .map((answer) {
+                return Answer(_answerQuestion, answer);
+              }).toList(),
             ],
           )),
     );

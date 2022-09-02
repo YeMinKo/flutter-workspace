@@ -87,10 +87,31 @@ Person.veryOld(this.name) {
 - To convert stateless to stateful, place cursor on StatelessWidget class and press `ctrl + shift + R`.
 - If you can't do that search `Refactoring` in key bindings.
 
+## No.38
+- using underscore (_) make types, fields and functions private.
+
 ## No. 40
 - `Container()` learned. (it's look like a `div`)
 ```
 width: double.infinity,
 margin: EdgeInsets.all(10),
 textAlign: TextAlign.center,
+```
+
+## No. 44
+- `Colors.blue` is a predefined color.
+
+## No. 47
+- `final` is a runtime constant value. (We don't know what the final value will be while coding, the value is locked when it start running)
+- `const` is a compile time constant value. (We know what the value will be stored)
+- **Value Const** is a new thing in Dart
+```
+// locked both the variable and the value - can't change both.
+const fruit = const ['apple']; 
+
+// only locked the variable - can change the value.
+const fruit = ['apple'];
+
+// only locked the value - can change the variable.
+var fruit = const ['apple'];
 ```
