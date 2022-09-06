@@ -115,3 +115,16 @@ const fruit = ['apple'];
 // only locked the value - can change the variable.
 var fruit = const ['apple'];
 ```
+
+## No. 50
+- allow `null` on **Dart**
+```
+String? username = 'Max';
+question['questionText']! 
+```
+
+## No. 53
+**Passing args method to widget**
+```
+() => answerQuestion('Hello'); // use anonymous function to pass args
+```
