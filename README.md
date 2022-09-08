@@ -128,3 +128,7 @@ question['questionText']!
 ```
 () => answerQuestion('Hello'); // use anonymous function to pass args
 ```
+
+## No. 66
+- `Ctrl + Shift + P` to open VS Code command
+- Type `dart devtools` 
