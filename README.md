@@ -132,3 +132,14 @@ question['questionText']!
 ## No. 66
 - `Ctrl + Shift + P` to open VS Code command
 - Type `dart devtools` 
+
+## No. 75
+- Date type in Dart is `DateTime` 
+- Need to use `toList()` method at the end of `map()` because `map()` return an iterable not a list.
+
+## No. 82
+**String Interpolation**
+```
+'Hello $name' // for primitive values
+'Hello ${person.name}' // for obj properties
+```
