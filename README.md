@@ -44,7 +44,7 @@ flutter packages get // install dependencies
 - `https://dartpad.dev/` use as online IDE
 
 ## No. 26
-**Named Arguments**
+### Named Arguments
 
 ```
 Person({@required String name, int age = 30}) {
@@ -124,7 +124,7 @@ question['questionText']!
 ```
 
 ## No. 53
-**Passing args method to widget**
+### Passing args method to widget
 ```
 () => answerQuestion('Hello'); // use anonymous function to pass args
 ```
@@ -138,8 +138,30 @@ question['questionText']!
 - Need to use `toList()` method at the end of `map()` because `map()` return an iterable not a list.
 
 ## No. 82
-**String Interpolation**
+### String Interpolation
 ```
 'Hello $name' // for primitive values
 'Hello ${person.name}' // for obj properties
 ```
+
+## No. 90
+- Rows and Columns can't scroll by default.
+- Wrap with `SingleChildSrollView()` widget to get scrolling function.
+
+## No. 91
+### ListView
+- `ListView` can scroll by default. Can be use as scrollable row and column.
+- `ListView(children: [])` is basically same as `SingleChildScrollView()` 
+- `ListView.builder()` is lazy loading scroll list.
+```
+ListView.builder(
+	itemCount: fruits.length, // total count to render
+	itemBuilder: (ctx, index) { // called by flutter for lazy loading
+		return Card(); 
+	}		
+)
+```
+
+## No. 92
+- `onSubmitted: (_) => myMethod,` // can use `_` to take arg that doesn't care.
+- `amount.toStringAsFixed(2)` for shorten decimal number.
