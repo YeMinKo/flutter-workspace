@@ -165,3 +165,32 @@ ListView.builder(
 ## No. 92
 - `onSubmitted: (_) => myMethod,` // can use `_` to take arg that doesn't care.
 - `amount.toStringAsFixed(2)` for shorten decimal number.
+
+## No. 95
+- State will loss when UI re-render in Stateless Widget.
+- Need to convert to Stateful if we need to kept state.
+
+### Access properties and methods from StatefulWidget in State Class
+```
+widget.greeting('Hi'); // use 'widget' to access state from StatefulWidget
+```
+
+### Close Modal Sheet
+- Use `Navigator.of(context).pop();` after form submitted.
+
+## No. 96
+### Custom Theme Setup
+-  `primarySwatch` generate a color scheme set. (light, dark variants)
+```
+return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
+);
+```
+
+- can use by calling as bellow
+```
+Theme.of(context).primaryColor
+Theme.of(context).primaryColorDark // dark variant
+```
