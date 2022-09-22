@@ -150,7 +150,7 @@ question['questionText']!
 
 ## No. 91
 ### ListView
-- `ListView` can scroll by default. Can be use as scrollable row and column.
+- `ListView` can scroll by default. Can be use as scrollable row or column.
 - `ListView(children: [])` is basically same as `SingleChildScrollView()` 
 - `ListView.builder()` is lazy loading scroll list.
 ```
@@ -194,3 +194,25 @@ return MaterialApp(
 Theme.of(context).primaryColor
 Theme.of(context).primaryColorDark // dark variant
 ```
+
+## No. 97 & 98
+- custom font setup
+
+## No. 99
+- add an image (don't forget to add image path in yaml file)
+- `SizedBox()` is a container that can be use without child widget. In commons, that widget is used as divider widget.
+
+## No. 101
+- getter method
+- for loop
+- date methods
+
+## No. 103
+- `where()` is like a `filter()` from JS.
+- need to call `toList()` because the return type of `where()` is iterable.
+
+## No. 104
+- `Stack()` widget is to overlap widgets.
+
+## No. 105
+`fold()` is like a `reduce()` from JS.
