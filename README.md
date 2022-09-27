@@ -216,3 +216,15 @@ Theme.of(context).primaryColorDark // dark variant
 
 ## No. 105
 `fold()` is like a `reduce()` from JS.
+
+## No. 106
+- `Flexible()` is like a flex box.
+- `FittedBox()` is to box a text (shrink the text).
+- `Padding()` is to add some padding (simple version of container).
+
+## No. 107
+- Learned detail about `Flexible()` widget.
+- `Expanded()` is same as `Flexible()` that contains `fit: FlexFit.tight` property.
+
+## No. 108
+- `ListTile()` is look like `ion-item` from Ionic.
