@@ -224,7 +224,11 @@ Theme.of(context).primaryColorDark // dark variant
 
 ## No. 107
 - Learned detail about `Flexible()` widget.
-- `Expanded()` is same as `Flexible()` that contains `fit: FlexFit.tight` property.
+- `Expanded()` is same as `Flexible()` that contains `fit: FlexFit.tight` property. It will take as much free space as it can get.
 
 ## No. 108
 - `ListTile()` is look like `ion-item` from Ionic.
+
+## No. 112
+- Learned about Date picker `showDatePicker()`.
+- `Future` is like a `Promise`.
