@@ -232,3 +232,6 @@ Theme.of(context).primaryColorDark // dark variant
 ## No. 112
 - Learned about Date picker `showDatePicker()`.
 - `Future` is like a `Promise`.
+
+## No. 114
+- `removeWhere()` can remove an obj from list.
