@@ -235,3 +235,16 @@ Theme.of(context).primaryColorDark // dark variant
 
 ## No. 114
 - `removeWhere()` can remove an obj from list.
+
+## No. 121
+- Learned Responsive height.
+```
+MediaQuery.of(context).size.height * 0.6 // 60% of the screen
+
+(MediaQuery.of(context).size.height - appBar.preferredSize.height) * 0.4 // 40% but excluded appBar height
+
+MediaQuery.of(context).padding.top // get the height of phone's status bar
+```
+
+## No. 122
+- Learned about responsive Text size base on user phone's font size setting.
