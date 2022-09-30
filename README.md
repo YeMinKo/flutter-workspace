@@ -219,7 +219,7 @@ Theme.of(context).primaryColorDark // dark variant
 
 ## No. 106
 - `Flexible()` is like a flex box.
-- `FittedBox()` is to box a text (shrink the text).
+- `FittedBox()` is to change text size according to available space (shrink or grow)
 - `Padding()` is to add some padding (simple version of container).
 
 ## No. 107
@@ -248,3 +248,25 @@ MediaQuery.of(context).padding.top // get the height of phone's status bar
 
 ## No. 122
 - Learned about responsive Text size base on user phone's font size setting.
+
+## No. 123
+- `LayoutBuilder` gives constraints that applied to the surrounding container.
+```
+LayoutBuilder(builder: (ctx, constraints) { } 
+
+constraints.maxHeight * 0.6 // 60% height of the container
+```
+
+## No. 124
+- To define which orientation mode allowed for the app, use following codes.
+```
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+}
+```
+
+## No. 125
+- Learned about `Switch` widget (switch button). 
