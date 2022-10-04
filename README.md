@@ -270,3 +270,19 @@ void main() {
 
 ## No. 125
 - Learned about `Switch` widget (switch button). 
+
+## No. 127
+- You can use `if` inside of a list.
+- **Warning** don't use curly braces in this case.
+
+## No. 128
+- To get height of the virtual keyboard, 
+```
+MediaQuery.of(context).viewInsets.bottom
+```
+- Use together with `SingleChildScrollView` to get scrollable widget.
+- Has a link that include improved **ModelBottomSheet**.
+
+## No. 131
+- Adaptive UI for iOS
+- Platform check with `Platform.isIOS`
