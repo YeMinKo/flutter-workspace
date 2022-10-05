@@ -284,5 +284,20 @@ MediaQuery.of(context).viewInsets.bottom
 - Has a link that include improved **ModelBottomSheet**.
 
 ## No. 131
-- Adaptive UI for iOS
+- Adaptive UI for iOS.
+- `Switch.adaptive()` can show adaptive UI for android and ios.
 - Platform check with `Platform.isIOS`
+
+## No. 132
+- Learned about `CupertinoNavigationBar()`, `CupertinoIcons`, `CupertinoPageScaffold()`.
+- Use `GestureDector()` for custom icon.
+- To reduce size of `Row()` use following.
+```
+mainAxisSize: MainAxisSize.min // looks like width: min-content
+```
+
+## No. 133
+- `SaveArea()` widget make sure to only render inside of the safe area.
+
+## No. 134
+- `CupertinoApp()` to use iOS theme.

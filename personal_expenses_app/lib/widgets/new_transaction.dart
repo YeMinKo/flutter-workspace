@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -87,10 +90,15 @@ class _NewTransactionState extends State<NewTransaction> {
                   ],
                 ),
               ),
-              ElevatedButton(
-                child: Text('Add Transaction'),
-                onPressed: _submitData,
-              )
+              Platform.isIOS
+                  ? CupertinoButton(
+                      child: Text('Add Transaction'),
+                      onPressed: _submitData,
+                    )
+                  : ElevatedButton(
+                      child: Text('Add Transaction'),
+                      onPressed: _submitData,
+                    )
             ],
           ),
         ),
