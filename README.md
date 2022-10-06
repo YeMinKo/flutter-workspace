@@ -301,3 +301,10 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 
 ## No. 134
 - `CupertinoApp()` to use iOS theme.
+
+## No. 141
+- `setState()` automatically call `build()` method to re-render widget.
+- `MediaQuery` also calls `build()` method when size change.
+
+## No. 142
+- When the parent `build()` is called, the children `build()` are also called.
