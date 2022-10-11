@@ -303,8 +303,29 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 - `CupertinoApp()` to use iOS theme.
 
 ## No. 141
+- `WidgetTree, ElementTree and RendereTree` learned.
 - `setState()` automatically call `build()` method to re-render widget.
-- `MediaQuery` also calls `build()` method when size change.
+- `MediaQuery` also calls `build()` method when size change. Should split small widgets and call inside them.
 
 ## No. 142
 - When the parent `build()` is called, the children `build()` are also called.
+
+## No. 144
+### Const Constructor
+
+- Class with only `final` variables can use `const` constructor.
+- Always use _Const Constructor_ for all _StateLess Widget_.
+- Always use `const` in front of the widget that parse constant value. For example
+```
+const Text('Hello)
+```
+- This prevent unnecessary widget **rebuild**.
+
+## No. 148
+### Stateful Widget LifeCycle 
+- `initState()` - only once when widget is created
+- `build()` 
+- `setState()`
+- `didUpdateWidget()` - every time state is change
+- `build()` 
+- `dispose()` - only once when widget is destroyed
