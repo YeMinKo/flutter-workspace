@@ -322,10 +322,34 @@ const Text('Hello)
 - This prevent unnecessary widget **rebuild**.
 
 ## No. 148
-### Stateful Widget LifeCycle 
-- `initState()` - only once when widget is created
-- `build()` 
-- `setState()`
-- `didUpdateWidget()` - every time state is change
-- `build()` 
-- `dispose()` - only once when widget is destroyed
+### Stateful Widget Lifecycle 
+| Lifecycle | Description | 
+| --------- | ----------- |
+| initState() | only once when widget is created | 
+| build() | - |
+| setState() | - |
+| didUpdateWidget() | every time state is change | 
+| build() | - |
+| dispose() | only once when widget is destroyed | 
+
+## No. 150
+### App Lifecycle
+| Lifecycle State Name | When is it hit? | 
+|----------------------|-----------------|
+| inactive | App is inactive, no user input received |
+| paused | App is no visible to user, running in background | 
+| resume | App is (again) visible and responding to user input |
+| suspending | App is about to be suspended (exited) |
+
+### Mixin
+- Mixin is simlier to inheritance but not becoming a subclass. 
+- Just mix methods and properties from other class.
+- Use with `width` keyword on class.
+- Learned App Lifecycle states using `didChangeAppLifecycleState()`.
+
+## No. 151
+- `Context` contains meta information of widget and its location in the widget tree.
+
+## No. 153
+- Learned problem about Stateful widget.
+- Learned why `Key` is need in Stateful widget.
