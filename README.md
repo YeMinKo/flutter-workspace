@@ -353,3 +353,13 @@ const Text('Hello)
 ## No. 153
 - Learned problem about Stateful widget.
 - Learned why `Key` is need in Stateful widget.
+- Flutter only find match widgets by checking its type. By defining unique key for each widget, Flutter now distinguish with id + type.
+
+## No. 154
+- `Key` is only need to add in the top level widget.
+- Use `ValueKey(tx.id)` to parse id.
+- Need to parse key to parent widget by calling `super()` method.
+
+## No. 159
+- Learned `GridView` widget.
+- `SliverGridDelegateWithMaxCrossAxisExtent` define size for each grid item.
