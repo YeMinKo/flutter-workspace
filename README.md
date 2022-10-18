@@ -363,3 +363,6 @@ const Text('Hello)
 ## No. 159
 - Learned `GridView` widget.
 - `SliverGridDelegateWithMaxCrossAxisExtent` define size for each grid item.
+
+## No. 160
+- Learned `LinerGradient()` and `BorderRadius()`
