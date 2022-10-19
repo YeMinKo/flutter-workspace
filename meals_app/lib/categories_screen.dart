@@ -15,14 +15,15 @@ class CategoriesScreen extends StatelessWidget {
         padding: const EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map(
-              (catData) => CategoryItem(catData.title, catData.color),
+              (catData) =>
+                  CategoryItem(catData.id, catData.title, catData.color),
             )
             .toList(),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
           crossAxisSpacing: 20,
-          mainAxisExtent: 20,
+          mainAxisSpacing: 20,
         ),
       ),
     );

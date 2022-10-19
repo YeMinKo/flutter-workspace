@@ -365,4 +365,9 @@ const Text('Hello)
 - `SliverGridDelegateWithMaxCrossAxisExtent` define size for each grid item.
 
 ## No. 160
-- Learned `LinerGradient()` and `BorderRadius()`
+- Learned `LinerGradient()` and `BorderRadius()`.
+
+## No. 163
+- Learned `InkWell()`.
+- Learned `Navigator`.
+- `Navigator` use `push()` and `pop()` to change between pages. (It works like a stack)
