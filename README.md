@@ -371,3 +371,9 @@ const Text('Hello)
 - Learned `InkWell()`.
 - Learned `Navigator`.
 - `Navigator` use `push()` and `pop()` to change between pages. (It works like a stack)
+
+## No. 165
+- Learned `routes`, `pushNamed()`, `ModalRoute`
+
+## No. 166
+- Learned `initialRoute`.
