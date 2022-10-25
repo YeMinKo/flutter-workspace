@@ -377,3 +377,12 @@ const Text('Hello)
 
 ## No. 166
 - Learned `initialRoute`.
+
+## No. 169
+- Learned `ClipRRect()`.
+- This can be use to crop an image which is inside of the rounded corner widget.
+- Learned `Image.network()`.
+
+## No. 170
+- Learned `Positioned()`.
+- Can be use inside `Stack()` widget.
