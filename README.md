@@ -386,3 +386,13 @@ const Text('Hello)
 ## No. 170
 - Learned `Positioned()`.
 - Can be use inside `Stack()` widget.
+
+## No. 172
+- `onGenerateRoute` run if there is no registered route found).
+- `MaterialPageRoute()` can build a route on the fly.
+- `onUnknownRoute` run if other route systems failed.
+
+## No. 173
+- `firstWhere()` can pick one element from an array (only pick first found!).
+
+	
