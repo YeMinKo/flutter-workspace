@@ -395,4 +395,15 @@ const Text('Hello)
 ## No. 173
 - `firstWhere()` can pick one element from an array (only pick first found!).
 
+## No. 173
+- `Driver()` widget can use to draw horizontal line.
+
+## No. 174
+- Learned `DefaultTabController()` to add a top tab bar.
+
+## No. 175
+- Learned `BottomNavigationBar()` to add a bottom tab bar.
+
+## No. 176
+- Learned `Drawer()` to add a menu.
 	
