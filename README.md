@@ -177,6 +177,7 @@ widget.greeting('Hi'); // use 'widget' to access state from StatefulWidget
 
 ### Close Modal Sheet
 - Use `Navigator.of(context).pop();` after form submitted.
+- `pop()` remove the current screen.
 
 ## No. 96
 ### Custom Theme Setup
@@ -406,4 +407,11 @@ const Text('Hello)
 
 ## No. 176
 - Learned `Drawer()` to add a menu.
-	
+
+## No. 178
+- Use `pushReplacementNamed()` in `Drawer` to avoid too many page stack.
+- Can be use when don't want to go back to previous page.
+
+## No. 179
+- `pop()` remove the current page.
+`popAndPushNamed()` remove current page and add new page.
