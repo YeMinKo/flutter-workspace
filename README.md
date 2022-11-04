@@ -414,4 +414,8 @@ const Text('Hello)
 
 ## No. 179
 - `pop()` remove the current page.
-`popAndPushNamed()` remove current page and add new page.
+- `popAndPushNamed()` remove current page and add new page.
+
+### Can't use Route in initState()
+- Use `didChangeDependencies()` instead.
+- This hook run whenever the dependencies of the state change.
