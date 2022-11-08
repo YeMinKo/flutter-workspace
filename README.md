@@ -171,6 +171,7 @@ ListView.builder(
 - Need to convert to Stateful if we need to kept state.
 
 ### Access properties and methods from StatefulWidget in State Class
+- Can only use in `initState()` and `build()` methods. (**No. 182**)
 ```
 widget.greeting('Hi'); // use 'widget' to access state from StatefulWidget
 ```
@@ -419,3 +420,7 @@ const Text('Hello)
 ### Can't use Route in initState()
 - Use `didChangeDependencies()` instead.
 - This hook run whenever the dependencies of the state change.
+
+## No. 182
+- `indexWhere()` can use to find the first index in the list that satisfies the provided.
+- `any()` can return true/false by checking whether any element of this iterable satisfies.
