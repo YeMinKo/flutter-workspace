@@ -424,3 +424,12 @@ const Text('Hello)
 ## No. 182
 - `indexWhere()` can use to find the first index in the list that satisfies the provided.
 - `any()` can return true/false by checking whether any element of this iterable satisfies.
+
+## No. 189
+- Learned `GridTile` widget.
+- Learned `GridTileBar` widget.
+
+## No. 194 
+- Learned `Provider` package.
+- `with` is an inheritance lite. The class only get methods and properties. Not become a sub-class of the parent class.
+- `ChangeNotifierProvider` can emit data changes to all listeners.
