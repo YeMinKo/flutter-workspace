@@ -430,6 +430,15 @@ const Text('Hello)
 - Learned `GridTileBar` widget.
 
 ## No. 194 
-- Learned `Provider` package.
+- Learned `Provider` package. Use `create` instead of `builder`.
 - `with` is an inheritance lite. The class only get methods and properties. Not become a sub-class of the parent class.
-- `ChangeNotifierProvider` can emit data changes to all listeners.
+- Use `ChangeNotifier` to create a provider
+- Use `ChangeNotifierProvider` to setup the provider.
+- Use `notifyListeners()` to emit data changes.
+
+## No. 195
+- Learned `mixin`. 
+- Mixins is all about how a class does what it does, it's inheriting and sharing concrete implementation. Interfaces is all about what a class is, it is the abstract signature and promises that the class must satisfy. It's a type.
+
+## No. 197
+- Use `listen: false` in `Provider` to not rebuild when data is changed.
