@@ -442,3 +442,15 @@ const Text('Hello)
 
 ## No. 197
 - Use `listen: false` in `Provider` to not rebuild when data is changed.
+
+## No. 199
+- Use `create()` if you are creating new instance of widget.
+- Use `ChangeNotifierProvider.value()` if you reuse the existing widget.
+- `ChangeNotifierProvider` can automatically unsubscribe data.
+
+## No. 200
+- Can use `Consumer()` instead of `Provider.of()`.
+- Use `child` prop for a widget that don't need to rebuild.
+
+## No. 201
+- Learned `PopupMenuButton()` widget.
