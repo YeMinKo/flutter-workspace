@@ -14,6 +14,8 @@ class ProductsOveriewScreen extends StatefulWidget {
 }
 
 class _ProductsOveriewScreenState extends State<ProductsOveriewScreen> {
+  var _showOnlyFavorites = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +24,13 @@ class _ProductsOveriewScreenState extends State<ProductsOveriewScreen> {
         actions: [
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
-              if (selectedValue == FilterOptions.Favorites) {
-              } else {}
+              setState(() {
+                if (selectedValue == FilterOptions.Favorites) {
+                  _showOnlyFavorites = true;
+                } else {
+                  _showOnlyFavorites = false;
+                }
+              });
             },
             icon: Icon(
               Icons.more_vert,
@@ -41,7 +48,7 @@ class _ProductsOveriewScreenState extends State<ProductsOveriewScreen> {
           ),
         ],
       ),
-      body: ProductGrid(),
+      body: ProductGrid(_showOnlyFavorites),
     );
   }
 }
