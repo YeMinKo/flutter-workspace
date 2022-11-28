@@ -460,3 +460,13 @@ const Text('Hello)
 
 ## No. 203
 - `MultiProvider()` can used to add multi providers for widgets.
+
+## No. 204
+- Used `child` prop of `Consumer()`.
+
+## No. 205
+- Learned `Chip()` widget.
+- Use `Spacer()` widget to take available white space.
+
+## No. 206
+- `show` keyword in import makes to only import selected things.
