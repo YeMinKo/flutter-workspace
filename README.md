@@ -470,3 +470,6 @@ const Text('Hello)
 
 ## No. 206
 - `show` keyword in import makes to only import selected things.
+
+## No. 207
+- `Dismissible()` widget can use to make swipe-able item.
