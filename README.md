@@ -473,3 +473,9 @@ const Text('Hello)
 
 ## No. 207
 - `Dismissible()` widget can use to make swipe-able item.
+
+## No. 212
+- `automaticallyImplyLeading` can be set to `false` to hide back button.
+
+## No. 213
+- `min()` method return less value.
