@@ -479,3 +479,9 @@ const Text('Hello)
 
 ## No. 213
 - `min()` method return less value.
+
+## No. 217
+- Learned `SnackBar()` widget.
+
+## No. 219
+- Learned `showDialog()` widget. 
