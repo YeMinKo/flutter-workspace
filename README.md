@@ -498,3 +498,7 @@ const Text('Hello)
 
 ## No. 225
 - Learned about form controls. (Include `FocusNode()`).
+
+## No. 228
+- `Form()` widget need to provide `GlobalKey()`.
+- `Form()` is a stateful widget.
