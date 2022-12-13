@@ -502,3 +502,6 @@ const Text('Hello)
 ## No. 228
 - `Form()` widget need to provide `GlobalKey()`.
 - `Form()` is a stateful widget.
+
+## No. 229
+- If `validator` return `null`, the input is valid no error.
