@@ -505,3 +505,7 @@ const Text('Hello)
 
 ## No. 229
 - If `validator` return `null`, the input is valid no error.
+
+## No. 230
+- `double.tryParse(value)` can use to check `value` is a valid number. Return `null` if `value` is invalid.
+- `startsWith()` and `endsWith()` can be use for String value.
