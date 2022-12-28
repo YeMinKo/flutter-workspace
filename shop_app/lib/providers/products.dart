@@ -55,7 +55,7 @@ class Products with ChangeNotifier {
       id: DateTime.now().toString(),
     );
     _items.add(newProduct);
-    _items.insert(0, newProduct); // at the start of the list
+    // _items.insert(0, newProduct); // at the start of the list
     notifyListeners();
   }
 
@@ -65,6 +65,16 @@ class Products with ChangeNotifier {
 
   List<Product> get favoriteItems {
     return _items.where((prodItem) => prodItem.isFavorite).toList();
+  }
+
+  void updateProduct(String id, Product newProduct) {
+    final prodIndex = _items.indexWhere((prod) => prod.id == id);
+    if (prodIndex >= 0) {
+      _items[prodIndex] = newProduct;
+      notifyListeners();
+    } else {
+      print("Can't update!");
+    }
   }
 
   // void showFavoritesOnly() {
