@@ -511,3 +511,7 @@ const Text('Hello)
 ## No. 230
 - `double.tryParse(value)` can use to check `value` is a valid number. Return `null` if `value` is invalid.
 - `startsWith()` and `endsWith()` can be use for String value.
+
+## No. 248
+- `async` automatically warp all code with `Future` 
+- And automatically return `Future`

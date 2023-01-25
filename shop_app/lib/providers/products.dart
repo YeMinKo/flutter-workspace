@@ -49,25 +49,24 @@ class Products with ChangeNotifier {
     return [..._items];
   }
 
-  Future<void> addProduct(Product product) {
+  Future<void> addProduct(Product product) async {
     final url = Uri.parse(
-        "https://flutter-udemy-project-ymk-default-rtdb.asia-southeast1.firebasedatabase.app/products.json");
+        "https://flutter-udemy-project-ymk-default-rtdb.asia-southeast1.firebasedatabase.app/products");
 
-    return http
-        .post(
-      url,
-      body: json.encode(
-        {
-          'title': product.title,
-          'description': product.description,
-          'imageUrl': product.imageUrl,
-          'price': product.price,
-          'isFavorite': product.isFavorite,
-        },
-      ),
-    )
-        .then((response) {
-      print(json.decode(response.body));
+    try {
+      final response = await http.post(
+        url,
+        body: json.encode(
+          {
+            'title': product.title,
+            'description': product.description,
+            'imageUrl': product.imageUrl,
+            'price': product.price,
+            'isFavorite': product.isFavorite,
+          },
+        ),
+      );
+
       final newProduct = Product(
         title: product.title,
         description: product.description,
@@ -78,7 +77,10 @@ class Products with ChangeNotifier {
       _items.add(newProduct);
       // _items.insert(0, newProduct); // at the start of the list
       notifyListeners();
-    });
+    } catch (error) {
+      print(error);
+      throw error;
+    }
   }
 
   Product findById(String id) {
