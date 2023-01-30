@@ -377,6 +377,7 @@ const Text('Hello)
 ## No. 165
 - Learned `routes`, `pushNamed()`, `ModalRoute`
 - `ModalRoute` can be use in `didChangeDependencies()` life cycle.
+- `didChangeDependencies` run everytime when widget change.
 - `ModalRoute` used to extract value from route (More in No. 233). 
 
 ## No. 166
