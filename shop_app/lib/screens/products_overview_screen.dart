@@ -21,10 +21,21 @@ class ProductsOveriewScreen extends StatefulWidget {
 
 class _ProductsOveriewScreenState extends State<ProductsOveriewScreen> {
   var _showOnlyFavorites = false;
+  var _isLoading = false;
 
   @override
   void initState() {
-    Provider.of<Products>(context, listen: false).fetchAndSetProducts();
+    setState(() {
+      _isLoading = true;
+    });
+
+    Provider.of<Products>(context, listen: false)
+        .fetchAndSetProducts()
+        .then((_) {
+      setState(() {
+        _isLoading = false;
+      });
+    });
     super.initState();
   }
 
@@ -75,7 +86,11 @@ class _ProductsOveriewScreenState extends State<ProductsOveriewScreen> {
         ],
       ),
       drawer: AppDrawer(),
-      body: ProductGrid(_showOnlyFavorites),
+      body: _isLoading
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : ProductGrid(_showOnlyFavorites),
     );
   }
 }
