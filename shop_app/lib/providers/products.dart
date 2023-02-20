@@ -57,8 +57,10 @@ class Products with ChangeNotifier {
       final response = await http.get(url);
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
       final List<Product> loadedProducts = [];
+      print(response.body);
       extractedData.forEach(
         (productID, productData) {
+          print("productID: " + productID);
           loadedProducts.add(
             Product(
               id: productID,
@@ -146,8 +148,22 @@ class Products with ChangeNotifier {
   }
 
   void deleteProduct(String id) {
-    _items.removeWhere((prod) => prod.id == id);
+    print(id);
+    final url = Uri.parse(
+        "https://flutter-udemy-project-ymk-default-rtdb.asia-southeast1.firebasedatabase.app/products/$id/.json");
+    final existingProductIndex = _items.indexWhere((prod) => prod.id == id);
+    var existingProduct = _items[existingProductIndex];
+    _items.removeAt(existingProductIndex);
     notifyListeners();
+
+    http.delete(url).then((response) {
+      if (response.statusCode >= 400) {}
+
+      existingProduct = null;
+    }).catchError((_) {
+      _items.insert(existingProductIndex, existingProduct);
+      notifyListeners();
+    });
   }
 
   // void showFavoritesOnly() {
