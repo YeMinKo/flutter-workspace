@@ -647,3 +647,7 @@ const Text('Hello)
 
 - In firebase, only `GET` and `POST` requests throw errors.
 - For `PATCH` `PUT` `DELETE` it doesn’t throw errors. (only response status code like `403`)
+
+## No. 259
+
+- Can use `FutureBuilder` to load data from server.
