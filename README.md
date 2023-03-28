@@ -651,3 +651,14 @@ const Text('Hello)
 ## No. 259
 
 - Can use `FutureBuilder` to load data from server.
+
+## No. 265
+
+- `..` can use to make previous method return instead of current one.
+
+```
+/**
+* rotationZ() will return instead of translate()
+*/
+transform: Matrix4.rotationZ(-8 * pi / 180)..translate(-10.0)
+```
