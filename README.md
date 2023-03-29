@@ -662,3 +662,14 @@ const Text('Hello)
 */
 transform: Matrix4.rotationZ(-8 * pi / 180)..translate(-10.0)
 ```
+
+## No. 269
+
+- You can filter exception using this
+
+```
+try {
+  ...
+} on HttpException catch (error) {
+} catch (error) {}
+```
