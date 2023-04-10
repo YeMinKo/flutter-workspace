@@ -673,3 +673,16 @@ try {
 } on HttpException catch (error) {
 } catch (error) {}
 ```
+
+## No. 271
+
+- `ChangeNotifierProxyProvider` can used to get value from other providers
+- make sure the required provider must declared before the `ChangeNotifierProxyProvider`.
+
+## No. 274
+
+- Optional positional arguments can be written as follow.
+
+```
+fetchAndSetProducts([bool filterByUser = false]) {}
+```
