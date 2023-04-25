@@ -1,4 +1,4 @@
-# Flutter Highlights
+# Flutter Highlights (both legacy and modern lectures)
 
 ```
 emulator -list-avds (show all emulators)
@@ -28,6 +28,7 @@ emulator @Pixel_5_API_31 -logcat i (open emulator with logs)
 - install **Android SDK Command Line Tools** from Android Studio
 
 ```
+flutter create first_project // project creation
 flutter run // run from console
 ```
 
@@ -684,5 +685,5 @@ try {
 - Optional positional arguments can be written as follow.
 
 ```
-fetchAndSetProducts([bool filterByUser = false]) {}
+fetchAndSetProducts(String name, [bool filterByUser = false]) {}
 ```
