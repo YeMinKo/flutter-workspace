@@ -1,5 +1,12 @@
 # Flutter Highlights (both legacy and modern lectures)
 
+### Video Number Format Example
+
+```
+Legacy Video: No. 12
+Modern Video: No. 12M
+```
+
 ```
 emulator -list-avds (show all emulators)
 emulator @Pixel_5_API_31D (open emulator)
@@ -87,6 +94,10 @@ Person.veryOld(this.name) {
 
 - `Scaffold()` is a basic mobile layout scheme
 - `appBar()` learned
+
+## No. 30M
+
+- learned about `LinearGradient`
 
 ## No. 33
 
