@@ -129,6 +129,20 @@ margin: EdgeInsets.all(10),
 textAlign: TextAlign.center,
 ```
 
+## No. 43M
+
+- To define argument to constructur you can use two way
+
+```
+final String greet;
+const Hello(this.greet);
+
+// or
+
+final String greet;
+const Hello(): greet = "Hello";
+```
+
 ## No. 44
 
 - `Colors.blue` is a predefined color.
