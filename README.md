@@ -181,6 +181,10 @@ question['questionText']!
 () => answerQuestion('Hello'); // use anonymous function to pass args
 ```
 
+## No. 56M
+
+- Don't use `Opactiy` widget. It drain performace. Use `Color.fromARGB()`.
+
 ## No. 66
 
 - `Ctrl + Shift + P` to open VS Code command
