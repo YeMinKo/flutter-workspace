@@ -185,6 +185,10 @@ question['questionText']!
 
 - Don't use `Opactiy` widget. It drain performace. Use `Color.fromARGB()`.
 
+## No. 64M
+
+- In dart `if else` statement can be used in an array.
+
 ## No. 66
 
 - `Ctrl + Shift + P` to open VS Code command
