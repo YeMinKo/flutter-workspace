@@ -194,10 +194,19 @@ question['questionText']!
 - `Ctrl + Shift + P` to open VS Code command
 - Type `dart devtools`
 
+## No. 72M
+
+- Can clone a list by using `List.of(array)` method.
+- Can shuffle a list by using `array.shuffle()` method.
+
 ## No. 75
 
 - Date type in Dart is `DateTime`
 - Need to use `toList()` method at the end of `map()` because `map()` return an iterable not a list.
+
+## No. 75M
+
+- You can easily add google fonts by installing `google_font` package.
 
 ## No. 82
 
