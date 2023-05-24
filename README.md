@@ -320,7 +320,7 @@ Theme.of(context).primaryColorDark // dark variant
 ## No. 107
 
 - Learned detail about `Flexible()` widget.
-- `Expanded()` is same as `Flexible()` that contains `fit: FlexFit.tight` property. It will take as much free space as it can get.
+- `Expanded()` is same as `Flexible()` that contains `fit: FlexFit.tight` property. It will take the space that is base on the parent widget's size.
 
 ## No. 108
 
