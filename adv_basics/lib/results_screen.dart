@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class ResultsScren extends StatelessWidget {
   final List<String> chosenAnswer;
+  final void Function() onReset;
 
   const ResultsScren({
     super.key,
     required this.chosenAnswer,
+    required this.onReset,
   });
 
   List<Map<String, Object>> getSummaryData() {
@@ -42,13 +44,23 @@ class ResultsScren extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-                "You answered $numCorrectQuestions out of $numTotalQuestins questions correctly"),
+              "You answered $numCorrectQuestions out of $numTotalQuestins questions correctly",
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 30),
             QuestionsSummary(summaryData),
             const SizedBox(height: 30),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Restart Quiz'),
+            TextButton.icon(
+              icon: const Icon(Icons.restart_alt),
+              onPressed: onReset,
+              label: const Text('Restart Quiz'),
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
             ),
           ],
         ),
