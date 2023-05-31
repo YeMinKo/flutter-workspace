@@ -1,5 +1,5 @@
 import 'package:adv_basics/data/questins.dart';
-import 'package:adv_basics/questions_summary.dart';
+import 'package:adv_basics/quiz_summary/questions_summary.dart';
 import 'package:flutter/material.dart';
 
 class ResultsScren extends StatelessWidget {
@@ -12,7 +12,7 @@ class ResultsScren extends StatelessWidget {
     required this.onReset,
   });
 
-  List<Map<String, Object>> getSummaryData() {
+  List<Map<String, Object>> get summaryData {
     final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnswer.length; i++) {
@@ -28,13 +28,12 @@ class ResultsScren extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final summaryData = getSummaryData();
     final numTotalQuestins = questions.length;
-    final numCorrectQuestions = summaryData.where(
-      (data) {
-        return data['user_answer'] == data['correct_answer'];
-      },
-    ).length;
+    final numCorrectQuestions = summaryData
+        .where(
+          (data) => data['user_answer'] == data['correct_answer'],
+        )
+        .length;
 
     return SizedBox(
       width: double.infinity,
