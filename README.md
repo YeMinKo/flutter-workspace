@@ -311,6 +311,10 @@ Theme.of(context).primaryColorDark // dark variant
 
 `fold()` is like a `reduce()` from JS.
 
+## No. 105 (M)
+
+- `context` variable is available to use inside the state class.
+
 ## No. 106
 
 - `Flexible()` is like a flex box.
@@ -325,6 +329,10 @@ Theme.of(context).primaryColorDark // dark variant
 ## No. 108
 
 - `ListTile()` is look like `ion-item` from Ionic.
+
+## No. 108 (M)
+
+- You need to dispose `TextEditingController()` in `dispose()` lifecycle.
 
 ## No. 112
 
