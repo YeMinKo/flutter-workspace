@@ -434,6 +434,10 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 
 - `SaveArea()` widget make sure to only render inside of the safe area.
 
+## No. 133M
+
+- Learned how to lock the device orientation.
+
 ## No. 134
 
 - `CupertinoApp()` to use iOS theme.
