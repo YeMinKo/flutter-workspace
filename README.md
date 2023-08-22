@@ -359,6 +359,10 @@ MediaQuery.of(context).padding.top // get the height of phone's status bar
 
 - Learned about responsive Text size base on user phone's font size setting.
 
+## No. 122M
+
+- Modern way to configure the themes
+
 ## No. 123
 
 - `LayoutBuilder` gives constraints that applied to the surrounding container.
@@ -386,10 +390,18 @@ void main() {
 
 - Learned about `Switch` widget (switch button).
 
+## No. 126M
+
+- Learned about adding dark mode
+
 ## No. 127
 
 - You can use `if` inside of a list.
 - **Warning** don't use curly braces in this case.
+
+## No. 127
+
+- Learned about `for ... in` loop
 
 ## No. 128
 
