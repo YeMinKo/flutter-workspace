@@ -28,7 +28,7 @@ void main() {
   runApp(
     MaterialApp(
       home: const Expenses(),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       darkTheme: ThemeData.dark().copyWith(
         useMaterial3: true,
         colorScheme: kDarkColorScheme,
