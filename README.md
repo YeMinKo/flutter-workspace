@@ -442,6 +442,23 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 
 - `CupertinoApp()` to use iOS theme.
 
+## No. 134M
+
+- Expanded widget constraints the child (i.e Chart) to only take as much width as available in the Row after sizing the other Row children.
+
+## No. 135M
+
+- Understanding widget size constraints.
+
+## No. 136M
+
+- From `viewInsets`, we can get overlapping space that is taken by other UI elements.
+
+## No. 138M
+
+- Use `LayoutBuilder` if you only care about the parent widget's given size (width and height).
+- From `LayoutBuilder`, we can get avalible space that is given by parent widget.
+
 ## No. 141
 
 - `WidgetTree, ElementTree and RendereTree` learned.
