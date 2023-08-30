@@ -1,13 +1,13 @@
 # Flutter Highlights (both legacy and modern lectures)
 
-### Video Number Format Example
+## Video Number Format Example
 
-```
+```text
 Legacy Video: No. 12
 Modern Video: No. 12M
 ```
 
-```
+```bash
 emulator -list-avds (show all emulators)
 emulator @Pixel_5_API_31D (open emulator)
 emulator @Pixel_5_API_31 -logcat i (open emulator with logs)
@@ -34,7 +34,7 @@ emulator @Pixel_5_API_31 -logcat i (open emulator with logs)
 
 - install **Android SDK Command Line Tools** from Android Studio
 
-```
+```bash
 flutter create first_project // project creation
 flutter run // run from console
 ```
@@ -47,7 +47,7 @@ flutter run // run from console
 
 ## No. 17
 
-```
+```bash
 flutter packages get // install dependencies
 ```
 
@@ -64,7 +64,7 @@ flutter packages get // install dependencies
 
 ### Named Arguments
 
-```
+```dart
 Person({@required String name, int age = 30}) {
 ...
 }
@@ -76,7 +76,7 @@ Person(age: 30, name: 'Max') // calling with random order
 - can assign default value
 - can force with `@required` to mark as not optional
 
-```
+```dart
 Person({this.name, this.age}); // constructor shortcut (var names must be same with class vars)
 
 // multi constructors
@@ -88,7 +88,7 @@ Person.veryOld(this.name) {
 ## No. 27
 
 - `@override` learned
-- ` void main() => runApp(MyApp());` method with one expression
+- `void main() => runApp(MyApp());` method with one expression
 
 ## No. 28
 
@@ -103,7 +103,7 @@ Person.veryOld(this.name) {
 
 - anonymous function learned
 
-```
+```dart
 () => print("hello")
 () {
 //multi lines
@@ -123,7 +123,7 @@ Person.veryOld(this.name) {
 
 - `Container()` learned. (it's look like a `div`)
 
-```
+```dart
 width: double.infinity,
 margin: EdgeInsets.all(10),
 textAlign: TextAlign.center,
@@ -133,7 +133,7 @@ textAlign: TextAlign.center,
 
 - To define argument to constructur you can use two way
 
-```
+```dart
 final String greet;
 const Hello(this.greet);
 
@@ -153,7 +153,7 @@ const Hello(): greet = "Hello";
 - `const` is a compile time constant value. (We know what the value will be stored)
 - **Value Const** is a new thing in Dart
 
-```
+```dart
 // locked both the variable and the value - can't change both.
 const fruit = const ['apple'];
 
@@ -168,7 +168,7 @@ var fruit = const ['apple'];
 
 - allow `null` on **Dart**
 
-```
+```dart
 String? username = 'Max';
 question['questionText']!
 ```
@@ -177,7 +177,7 @@ question['questionText']!
 
 ### Passing args method to widget
 
-```
+```dart
 () => answerQuestion('Hello'); // use anonymous function to pass args
 ```
 
@@ -212,7 +212,7 @@ question['questionText']!
 
 ### String Interpolation
 
-```
+```dart
 'Hello $name' // for primitive values
 'Hello ${person.name}' // for obj properties
 ```
@@ -230,12 +230,12 @@ question['questionText']!
 - `ListView(children: [])` is basically same as `SingleChildScrollView()`
 - `ListView.builder()` is lazy loading scroll list.
 
-```
+```dart
 ListView.builder(
-	itemCount: fruits.length, // total count to render
-	itemBuilder: (ctx, index) { // called by flutter for lazy loading
-		return Card();
-	}
+ itemCount: fruits.length, // total count to render
+ itemBuilder: (ctx, index) { // called by flutter for lazy loading
+  return Card();
+ }
 )
 ```
 
@@ -253,7 +253,7 @@ ListView.builder(
 
 - Can only use in `initState()` and `build()` methods. (**No. 182**)
 
-```
+```dart
 widget.greeting('Hi'); // use 'widget' to access state from StatefulWidget
 ```
 
@@ -268,7 +268,7 @@ widget.greeting('Hi'); // use 'widget' to access state from StatefulWidget
 
 - `primarySwatch` generate a color scheme set. (light, dark variants)
 
-```
+```dart
 return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.purple,
@@ -278,7 +278,7 @@ return MaterialApp(
 
 - can use by calling as bellow
 
-```
+```dart
 Theme.of(context).primaryColor
 Theme.of(context).primaryColorDark // dark variant
 ```
@@ -347,7 +347,7 @@ Theme.of(context).primaryColorDark // dark variant
 
 - Learned Responsive height.
 
-```
+```dart
 MediaQuery.of(context).size.height * 0.6 // 60% of the screen
 
 (MediaQuery.of(context).size.height - appBar.preferredSize.height) * 0.4 // 40% but excluded appBar height
@@ -367,7 +367,7 @@ MediaQuery.of(context).padding.top // get the height of phone's status bar
 
 - `LayoutBuilder` gives constraints that applied to the surrounding container.
 
-```
+```dart
 LayoutBuilder(builder: (ctx, constraints) { }
 
 constraints.maxHeight * 0.6 // 60% height of the container
@@ -377,7 +377,7 @@ constraints.maxHeight * 0.6 // 60% height of the container
 
 - To define which orientation mode allowed for the app, use following codes.
 
-```
+```dart
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
@@ -399,7 +399,7 @@ void main() {
 - You can use `if` inside of a list.
 - **Warning** don't use curly braces in this case.
 
-## No. 127
+## No. 127M
 
 - Learned about `for ... in` loop
 
@@ -407,7 +407,7 @@ void main() {
 
 - To get height of the virtual keyboard,
 
-```
+```dart
 MediaQuery.of(context).viewInsets.bottom
 ```
 
@@ -426,7 +426,7 @@ MediaQuery.of(context).viewInsets.bottom
 - Use `GestureDector()` for custom icon.
 - To reduce size of `Row()` use following.
 
-```
+```dart
 mainAxisSize: MainAxisSize.min // looks like width: min-content
 ```
 
@@ -461,7 +461,7 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 
 ## No. 141
 
-- `WidgetTree, ElementTree and RendereTree` learned.
+- `WidgetTree, ElementTree and RenderTree` learned.
 - `setState()` automatically call `build()` method to re-render widget.
 - `MediaQuery` also calls `build()` method when size change. Should split small widgets and call inside them.
 
@@ -477,11 +477,20 @@ mainAxisSize: MainAxisSize.min // looks like width: min-content
 - Always use _Const Constructor_ for all _StateLess Widget_.
 - Always use `const` in front of the widget that parse constant value. For example
 
-```
+```dart
 const Text('Hello)
 ```
 
 - This prevent unnecessary widget **rebuild**.
+
+## No. 147M
+
+- Setting key with `ValueKey()` or `ObjectKey()`
+- `ValueKey()` is the recommended way
+
+## No. 148M
+
+- `var` vs `final` vs `const`
 
 ## No. 148
 
@@ -577,7 +586,7 @@ const Text('Hello)
 
 - `firstWhere()` can pick one element from an array (only pick first found!).
 
-## No. 173
+## No. 173M
 
 - `Driver()` widget can use to draw horizontal line.
 
@@ -740,7 +749,7 @@ const Text('Hello)
 
 - `..` can use to make previous method return instead of current one.
 
-```
+```dart
 /**
 * rotationZ() will return instead of translate()
 */
@@ -751,7 +760,7 @@ transform: Matrix4.rotationZ(-8 * pi / 180)..translate(-10.0)
 
 - You can filter exception using this
 
-```
+```dart
 try {
   ...
 } on HttpException catch (error) {
@@ -767,6 +776,6 @@ try {
 
 - Optional positional arguments can be written as follow.
 
-```
+```dart
 fetchAndSetProducts(String name, [bool filterByUser = false]) {}
 ```
