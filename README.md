@@ -548,6 +548,12 @@ const Text('Hello)
 
 - Learned `LinerGradient()` and `BorderRadius()`.
 
+## No. 160M
+
+- `Stack()` widget
+- `FadeInImage()` widget
+- `transparent_image` package
+
 ## No. 163
 
 - Learned `InkWell()`.
